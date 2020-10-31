@@ -1,0 +1,24 @@
+import pyautogui as pg
+from time import sleep
+import random
+
+pg.PAUSE = random.uniform(1.3, 1.7)
+pg.FAILSAFE = True
+## начало программы. Indigo
+pg.hotkey('Win') # открываем Win строку
+pg.typewrite('Indigo', interval = random.uniform(0.1, 0.2)) # вводим индиго
+pg.press('enter') # нажимаем Enter
+sleep(10) # Ждем пока индиго загрузится
+search_field = pg.locateCenterOnScreen(r'путь к скрину кнопки Search') # ищем Search
+pg.click(search_field) # кликаем по Search
+pg.typewrite('Имя аккаунта', interval = random.uniform(0.1, 0.2)) # вписываем название аккаунта
+start_button = pg.locateCenterOnScreen(r'путь к скриншоту кнопки старт') # ищем кнопку Start
+pg.click(start_button) # кликаем по Start
+## Действия в аккаунте
+sleep(60) # Ждем пока аккаунт загрузится
+pg.hotkey('ctrl','t') # открываем новую вкладку
+#pg.typewrite('вписываем путь с айди аккаунта и айди бма', interval= random.uniform(0.1, 0.2)) # вписываем ссылка на рекламный аккаунт
+pg.press('enter') # нажимаем Enter
+
+if this == that:
+  quit()
